@@ -1,0 +1,812 @@
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+html, body {
+	background:#ffffff;
+	text-align:left;
+	color:#555555;
+	font-size:14px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+	height:100%;
+	}
+
+a {
+	text-decoration: none;
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 14px;
+	}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 14px;
+	}
+
+a:hover {
+	color: ffffff;
+	text-decoration: none;
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 14px;
+	}
+
+/*-- from bootstrap --
+h1,h2,h3,h4,h5,h6 {
+	font-family:inherit;
+	font-weight:700;
+	line-height:20px;
+	color:inherit;
+	text-rendering:optimizelegibility;
+	margin:10px 0;
+	}
+--*/
+
+h1 {
+	font-size: 36px;
+	color: #333333;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:400;
+	line-height:40px;
+	padding: 10px;
+	margin: 20px 0px;
+	text-rendering:optimizelegibility;
+	}
+
+h2 {
+	font-size: 24px;
+	color:#0000CC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	line-height:26px;
+	padding: 0 0 10px;
+	margin:10px 0;
+	text-rendering:optimizelegibility;
+	}
+
+h3 {
+	font-size: 14px;
+	color:#0000CC;
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-weight: 700;
+	line-height:20px;
+	padding: 0 0 10px;
+	margin:10px 0;
+	text-rendering:optimizelegibility;	
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	}
+
+p {
+	color: #333333;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: 'Trebuchet MS', verdana, helvetica, sans-serif;
+	padding:0px;
+	margin: 0px;
+	}
+
+img {
+	border:none;
+	}
+
+table {
+	max-width:90%;
+	background-color:transparent;
+	border-collapse:collapse;
+	border-spacing:0;
+	}
+	
+/* id styling */
+
+#outercontainer {
+	width:100%;
+	height:100%;
+	position: relative;
+	min-height:100%; /*--for IE 5.5 and 6--*/
+	}
+
+#header {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 20px;
+	top: 0px;
+	left: 0px;
+	float: left;
+	z-index: 400;
+	background-color: #FFFFFF;
+	clear: both;
+	}
+
+#logo {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	clear:left;
+	float: left;
+	}
+
+#login-home {
+	font-size: 10px;
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	float: right;
+	z-index: 500;
+	filter: alpha(opacity=75);
+	opacity: .75;
+	background-color: #FFFFFF;
+	}
+
+#login-home a{
+		font-size: 10px;
+		text-decoration:none;
+		color:#666666;
+		}
+
+#homecontainer {
+	background: #eaeaea;
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	width: 20000px;
+	height:500px;
+	margin: 0;
+	padding: 0px;
+	}
+
+#homepromo {
+	width: 2000px;
+	float: left;
+	text-align:center;
+	padding: 20px;
+	}
+
+#homepromo-left {
+		width: 350px;
+		float: left;
+		font-family: helvetica, sans-serif;
+		text-align:center;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0;
+		margin-left: 150px;
+		padding-top: 60px;
+		padding-right: 10px;
+		padding-bottom: 0;
+		padding-left: 10px;
+		}
+	
+#homepromo-center {
+		width: 350px;
+		float: left;
+		font-family: helvetica, sans-serif;
+		text-align:center;
+		margin-top: 0;
+		margin-right: 0px;
+		margin-bottom: 0;
+		margin-left: 0;
+		padding-top: 100px;
+		padding-right: 40px;
+		padding-bottom: 0;
+		padding-left: 50px;
+		}
+
+#homepromo-right {
+		width: 300px;
+		clear:right;
+		float: left;
+		font-family: helvetica, sans-serif;
+		text-align:center;
+		position: relative;
+		margin-top: 0;
+		margin-right: 0px;
+		margin-bottom: 0;
+		margin-left: 0;
+		padding-top: 0px;
+		padding-right: 0px;
+		padding-bottom: 0;
+		padding-left: 0px;
+		}
+
+#slider-text {
+	color:#000000;
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	padding: 18px;
+	text-align:left;
+	float:left;
+	z-index: 400;
+	height:306px;
+	width:160px;
+	position:absolute;
+	top: 93px;
+	left: 52px;
+	filter: alpha(opacity=75);
+	opacity: .75;
+	}
+	
+
+#categories-container {
+	background-color: #eaeaea;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	width: 100%;
+	height:auto;
+	margin: 0px;
+	padding: 20px 20px 100px 20px;
+	}
+
+/*---home menu styles --*/
+
+#menu {
+	position: fixed;
+	top: 40px;
+	right: 0px;
+	clear: both;
+	float: right;
+	font-family: helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 18px;
+	z-index: 500;
+	filter: alpha(opacity=75);
+	opacity: .75;
+	background-color: #FFFFFF;
+	}
+
+#menu ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		}
+
+#menu ul li{
+			list-style-type: none;
+			color: #777;
+			display: inline;
+			margin: 0;
+			padding: 0 10px 0 10px;
+			}
+
+#menu ul li a{
+				text-decoration: none;
+				list-style-type: none;
+				color: #777;
+				display: inline;
+				margin: 0;
+				padding: 0;
+				}
+
+#menu ul li a:hover{
+					text-decoration: none;
+					list-style-type: none;
+					color: #0066FF;
+					display: inline;
+					margin: 0;
+					padding: 0;
+					}
+					
+/* --client-facing dropdown menu styling --*/
+
+#navcontainer {
+	width: 700px;
+	height: 40px;
+	position: relative;
+	float: right;
+	top: 40px;
+	right: 0px;
+	margin: 0px;
+	clear:right;
+	z-index: 500;
+	background-color: #FFFFFF;
+	}
+
+#navcontainer ul {
+	text-align: center;
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	background-color:#FFFFFF;
+	}
+
+#navcontainer ul li {
+	font-family: helvetica, sans-serif;
+	font: Verdana, Arial, Helvetica, sans-serif;
+	/*-- text-transform: uppercase; --*/
+	display:inline;
+	text-decoration:none;
+	padding:.2em 3em .2em 0em;
+	cursor: pointer;
+	-webkit-transition: padding .05s linear;
+	-moz-transition: padding .05s linear;
+	-ms-transition: padding .05s linear;
+	-o-transition: padding .05s linear;
+	transition: padding .05s linear;
+	background-color:#FFFFFF;
+
+	}
+
+#navcontainer ul > li {
+	display: inline-block;
+	}
+
+#navcontainer ul li a {
+	font-weight:200;
+	font-size: 22px;
+	line-height: 22px;
+	color: #666666;
+
+	-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-ms-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;
+	}
+	
+#navcontainer ul li a:hover {
+	color: #0033FF;
+	}
+
+#navcontainer ul li:hover a { color: #0033FF; }
+#navcontainer ul li:hover .dropdownContain { top: 35px; }
+#navcontainer ul li:hover .underline { border-bottom-color: #0033ff; }
+#navcontainer ul li:hover .dropOut { opacity: 1; margin-top: 0px; color:#666666; }
+
+	
+/*--footer area styling--*/
+
+#footer {
+	clear: both;
+	position:static;
+	float: left;
+	text-align: center;
+	height: 150px;
+	width: 100%;
+	}
+	
+#footer-home {
+	clear: both;
+	position: fixed;
+	width: 100%;
+	height: auto;
+	bottom: 0px;
+	left: 0px;
+	z-index:200;
+	float: left;
+	}
+	
+#social {
+	text-align: center;
+	padding:20px;
+	}
+
+#footer-links {
+	width: 700;
+	text-align:center;
+	height: 50px;
+	}
+	
+#footer-links ul li {
+	display:inline;
+	cursor: pointer;
+	}
+
+#footer-links ul li a {
+	text-decoration:none;
+	color:#666666;
+	}
+
+	
+/*--classes--*/
+
+.infoview {
+	padding:0px;
+	width: 90%;
+	clear:right;
+	margin-left: 60px;
+	margin-bottom: 20px;
+	height: 50px;
+	}
+	
+.infoview p {
+	color: #333333;
+	font-size: 14px;
+	line-height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin: 0px 0px 10px 0px;
+	font-weight: 300;
+	}
+
+.current-display {
+	background-color:#FFFFFF;
+	padding: 10px;
+	margin: 0px;
+	height:auto;
+	float: left;
+	}
+
+.message-display {
+	background-color:#F5f590;
+	padding: 10px;
+	margin: 0px;
+	height:auto;
+	float: right;
+	}
+	
+.message-display a {
+	color:#FF0000;
+	}
+
+.table-manager {
+	width: 100%;
+	margin-left:60px;
+	margin-bottom:60px;
+	}
+	
+.table-container {
+	width: auto;
+	margin: 10px 0px 0px 0px;
+	clear:both;
+	}
+
+.table {
+	width:90%;
+	background-color:#FFFFFF;
+	}
+
+.table th {
+	line-height:20px;
+	text-align:left;
+	vertical-align:top;
+	border-top:1px solid #ddd;
+	padding:8px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:600;
+	color:#ffffff;
+	background-color: #BFBFBF;
+	}
+	
+.table td {
+	line-height:20px;
+	text-align:left;
+	vertical-align:top;
+	border-top:1px solid #ddd;
+	padding:8px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	}
+
+.table thead th {
+	vertical-align:bottom;
+	}
+
+.box {
+	background: #eeeeee;
+	border: 3px dashed #222222;
+	width: 2000px;
+	height:300px;
+	float: left;
+	line-height: 22px;
+	margin: 30px;
+	padding: 5px 30px 30px 30px;
+	}
+
+.box p {
+		color:#666666;
+		font-size: 16px;
+		line-height:24px;
+		padding: 0 0 10px;
+		margin: 20px 0 10px 0;
+		}
+
+.shadow {
+	-moz-box-shadow: 5px 5px 5px #ccc;
+	-webkit-box-shadow: 5px 5px 5px #ccc;
+	box-shadow: 5px 5px 5px #ccc;
+		}
+
+.top-button--row {
+	width: 100%;
+	float: left;
+	margin-left: 60px;
+	margin-bottom: 20px;
+	}
+
+
+
+/* text classes */
+
+.text24boldblue {
+	font-weight: bold;
+	font-size: 24px;
+	line-height:36px;
+	color:#4F9DEC;
+	}
+	
+
+/*--dropdown menu classes--*/
+
+.drop {
+	position: relative;
+	}
+
+.dropOut .triangle {
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid white;
+	top: -8px;
+	left: 50%;
+	margin-left: -8px;
+	}
+	
+.dropdownContain {
+	width: 160px;
+	position: absolute;
+	z-index: 502;
+	left: 50%;
+	margin-left: -80px; /* half of width */
+	top: -20px;
+	}
+	
+.dropOut {
+	width: 160px;
+	background: white;
+	float: left;
+	position: relative;
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 6px rgba(0,0,0,.15);
+	box-shadow: 0 1px 6px rgba(0,0,0,.15);
+	-webkit-transition: all .1s ease-out;
+	-moz-transition: all .1s ease-out;
+	-ms-transition: all .1s ease-out;
+	-o-transition: all .1s ease-out;
+	transition: all .1s ease-out;
+	}
+
+.dropOut ul {
+	float: left;
+	padding: 10px 0;
+	}
+	
+.dropOut ul li {
+	text-align: left;
+	float: left;
+	width: 80px;
+	padding: 12px 0 10px 15px;
+	margin: 0px 10px;
+	font-size:16px;
+	color: #666666;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-transition: background .1s ease-out;
+	-moz-transition: background .1s ease-out;
+	-ms-transition: background .1s ease-out;
+	-o-transition: background .1s ease-out;
+	transition: background .1s ease-out;
+	}
+
+.dropOut ul li:hover {
+	background: #f6f6f6;
+	}
+
+
+
+/* button classes */
+
+.button {
+	border: 0px solid #000000;
+	background: #66aaee;
+	background: -webkit-gradient(linear, left top, left bottom, from(#66aaee), to(#6894c1));
+	background: -webkit-linear-gradient(top, #66aaee, #6894c1);
+	background: -moz-linear-gradient(top, #66aaee, #6894c1);
+	background: -ms-linear-gradient(top, #66aaee, #6894c1);
+	background: -o-linear-gradient(top, #66aaee, #6894c1);
+	margin-left:10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.4);
+	-moz-box-shadow: 1px 2px 1px rgba(0,0,0,.4);
+	box-shadow: 1px 2px 1px rgba(0,0,0,.4);
+	/*text-shadow: 0 1px 0px rgba(0,0,0,.4) ; */
+	color:#ffffff;
+	font-size: 12px;
+	line-height:14px;
+	font-family: Helvetica, Arial, Sans-Serif;
+	text-decoration: none;
+	vertical-align: middle;
+	/*vertical alignment of content within button*/
+	display: table; /*works except in IE7*/
+	width: 100%; /* Firefox needs this */
+	height: 100%; /* Height can be anything */
+	/* WebKit (Chrome & Safari) */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* IE */
+	display: -ms-box;
+	-ms-box-pack: center;
+	-ms-box-align: center;
+	/* Native CSS */
+	display: box;
+	box-pack: center;
+	box-align: center;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	}
+
+.button a {
+		color:#ffffff;
+		font-size: 14px;
+		line-height:14px;
+		font-family: Helvetica, Arial, Sans-Serif;
+		text-decoration: none;
+		}
+
+.button:hover {
+		   border-top-color: #000000;
+		   background: #00aaee;
+		   color: #ffffff;
+		   }
+   
+.button:active {
+		   border-top-color: #000000;
+		   background: #000000;
+		   }
+   
+
+
+.button-small {
+	border: 0px solid #000000;
+	background: #66aaee;
+	background: -webkit-gradient(linear, left top, left bottom, from(#66aaee), to(#6894c1));
+	background: -webkit-linear-gradient(top, #66aaee, #6894c1);
+	background: -moz-linear-gradient(top, #66aaee, #6894c1);
+	background: -ms-linear-gradient(top, #66aaee, #6894c1);
+	background: -o-linear-gradient(top, #66aaee, #6894c1);
+	margin-left:5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	box-shadow: 1px 2px 1px rgba(0,0,0,.4);
+	/*text-shadow: 0 1px 0px rgba(0,0,0,.4) ; */
+	color:#ffffff;
+	font-size: 12px;
+	line-height:11px;
+	font-family: Helvetica, Arial, Sans-Serif;
+	text-decoration: none;
+	vertical-align: middle;
+	/*vertical alignment of content within button*/
+	display: table; /*works except in IE7*/
+	width: 100%; /* Firefox needs this */
+	height: 100%; /* Height can be anything */
+	/* WebKit (Chrome & Safari) */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* IE */
+	display: -ms-box;
+	-ms-box-pack: center;
+	-ms-box-align: center;
+	/* Native CSS */
+	display: box;
+	box-pack: center;
+	box-align: center;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	}
+
+.button-small:hover {
+	border-top-color: #000000;
+	background: #00aaee;
+	color: #ffffff;
+	font-size:13px;
+	   }
+	   
+.button-small:active {
+	   border-top-color: #000000;
+	   background: #000000;
+	   }
+   
+
+.button-small-red {
+	border: 0px solid #FF0000;
+	background: #ff0000;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), to(#ad0000));
+	background: -webkit-linear-gradient(top, #ff0000, #ad0000);
+	background: -moz-linear-gradient(top, #ff0000, #ad0000);
+	background: -ms-linear-gradient(top, #ff0000, #ad0000);
+	background: -o-linear-gradient(top, #ff0000, #ad0000);
+	margin-left:5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+	box-shadow: 1px 2px 1px rgba(0,0,0,.4);
+	/*text-shadow: 0 1px 0px rgba(0,0,0,.4) ; */
+	color:#FFFFFF;
+	font-size: 12px;
+	line-height:11px;
+	font-family: Helvetica, Arial, Sans-Serif;
+	text-decoration: none;
+	vertical-align: middle;
+	/*vertical alignment of content within button*/
+	display: table; /*works except in IE7*/
+	width: auto; /* Firefox needs this */
+	height: 100%; /* Height can be anything */
+	/* WebKit (Chrome & Safari) */
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	/* Firefox */
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+	/* IE */
+	display: -ms-box;
+	-ms-box-pack: center;
+	-ms-box-align: center;
+	/* Native CSS */
+	display: box;
+	box-pack: center;
+	box-align: center;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	}
+	
+.button-small-red:hover {
+	border-top-color: #000000;
+	background: #F72889;
+	color: #ffffff;
+	font-size:13px;
+	   }
+	   
+.button-small-red:active {
+	   border-top-color: #000000;
+	   background: #000000;
+	   }   
